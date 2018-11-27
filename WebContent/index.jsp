@@ -120,8 +120,8 @@ $('#success').click(function (e) {
 </table>
 </div>
   
-<div class="footer">Copywright 2017:
- <a href="https://Prodevans technology.com"> ProDevans</a>
+<div class="footer">Copyright 2017:
+ <a href="http://Prodevans.com"> Prodevans Technologies LLP</a>
 </div>
 
 

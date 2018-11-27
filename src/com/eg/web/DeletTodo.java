@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class DeletTodo
  */
 @WebServlet("/DeletTodo")
-public class DeletTodo extends HttpServlet {
+public class DeletTodo extends HttpServlet implements EnvironmentVariable {
 	
 
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@localhost:1521/orclpdb";
+	String url="jdbc:oracle:thin:@"+host+":"+port+"/orcl1";
 	String usr="system";
 	String pwd="root";
 	PreparedStatement stmt=null;

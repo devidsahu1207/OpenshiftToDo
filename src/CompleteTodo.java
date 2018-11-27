@@ -12,13 +12,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.eg.web.EnvironmentVariable;
+
 
 @WebServlet("/CompleteTodo")
-public class CompleteTodo extends HttpServlet {
+public class CompleteTodo extends HttpServlet implements EnvironmentVariable {
 	
 
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@localhost:1521/orclpdb";
+	String url="jdbc:oracle:thin:@"+"103.117.156.56:"+port+"/orcl1";
 	String usr="system";
 	String pwd="root";
 	PreparedStatement stmt=null;
@@ -27,9 +29,13 @@ public class CompleteTodo extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		//System.out.println(System.getenv("DATABASE_HOST"));
+		
 		int  id= Integer.parseInt(request.getParameter("id"));
-		System.out.println(id);
-		System.out.println("ID for deletion : "+ id);
+		//System.out.println(id);
+		//System.out.println("ID for deletion : "+ id);
+		//System.out.println(System.getenv("DATABASE_HOST"));
+		//System.out.println(System.getenv("DATABASE_PORT"));
 		try{
 			Class.forName(driver);
 		

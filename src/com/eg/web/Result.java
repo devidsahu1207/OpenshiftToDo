@@ -20,11 +20,14 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class Result
  */
 @WebServlet("/Result")
-public class Result extends HttpServlet {
-	
-	
+public class Result extends HttpServlet implements EnvironmentVariable {
+
+	//String host=System.getenv("DATABASE_HOST");
+	//String port=System.getenv("DATABASE_PORT");
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@localhost:1521/orclpdb";
+	String url="jdbc:oracle:thin:@"+"103.117.155.56:"+port+"/orcl1";
+	
+	
 	String usr="system";
 	String pwd="root";
 	PreparedStatement stmt=null;
@@ -37,7 +40,7 @@ public class Result extends HttpServlet {
 //Getting all records from database
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
+		//System.out.println(url);
 		response.setContentType("text/html");
 		//String show=request.getParameter("show");
 		PrintWriter out=response.getWriter();
