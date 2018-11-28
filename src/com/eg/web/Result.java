@@ -25,7 +25,7 @@ public class Result extends HttpServlet implements EnvironmentVariable {
 	//String host=System.getenv("DATABASE_HOST");
 	//String port=System.getenv("DATABASE_PORT");
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@"+"103.117.156.56:"+port+"/orclpd";
+	String url="jdbc:oracle:thin:@"+host+":"+port+"/orclpd";
 	
 	
 	String usr="pddbadmin";
@@ -40,7 +40,7 @@ public class Result extends HttpServlet implements EnvironmentVariable {
 //Getting all records from database
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//System.out.println(url);
+		System.out.println(host);
 		response.setContentType("text/html");
 		//String show=request.getParameter("show");
 		PrintWriter out=response.getWriter();

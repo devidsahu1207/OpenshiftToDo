@@ -20,7 +20,7 @@ public class DeletTodo extends HttpServlet implements EnvironmentVariable {
 	
 
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@"+"103.117.156.56:"+port+"/orclpd";
+	String url="jdbc:oracle:thin:@"+host+":"+port+"/orclpd";
 	
 	
 	String usr="pddbadmin";
