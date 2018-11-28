@@ -20,7 +20,7 @@ $(document).ready(function () {
 $('#success').click(function (e) {
   e.preventDefault()
   $('#message').html('<div class="alert alert-success fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>This is a success message</div>');
-})
+}
 </script>
 <meta charset="ISO-8859-1">
 <title>To_Do page</title>
@@ -56,7 +56,7 @@ $('#success').click(function (e) {
 <div class="form_class">
 <article>
 <header>
-<h1>TODO TASK MANAGEMENT </h1><br>
+<h1>TASK MANAGEMENT </h1><br>
 </header>
 </article>
 </div>
@@ -120,8 +120,8 @@ $('#success').click(function (e) {
 </table>
 </div>
   
-<div class="footer">copyrite 2017:
- <a href="https://Prodevans technology.com"> ProDevans</a>
+<div class="footer">Copyright 2017:
+ <a href="http://Prodevans.com"> Prodevans Technologies LLP</a>
 </div>
 
 
