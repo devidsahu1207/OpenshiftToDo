@@ -20,9 +20,11 @@ public class CompleteTodo extends HttpServlet implements EnvironmentVariable {
 	
 
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@"+"103.117.156.56:"+port+"/orcl1";
-	String usr="system";
-	String pwd="root";
+	String url="jdbc:oracle:thin:@"+"103.117.156.56:"+port+"/orclpd";
+	
+	
+	String usr="pddbadmin";
+	String pwd="Redhat123";
 	PreparedStatement stmt=null;
 	ResultSet rs=null;
 

@@ -25,11 +25,11 @@ public class Result extends HttpServlet implements EnvironmentVariable {
 	//String host=System.getenv("DATABASE_HOST");
 	//String port=System.getenv("DATABASE_PORT");
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@"+"103.117.155.56:"+port+"/orcl1";
+	String url="jdbc:oracle:thin:@"+"103.117.156.56:"+port+"/orclpd";
 	
 	
-	String usr="system";
-	String pwd="root";
+	String usr="pddbadmin";
+	String pwd="Redhat123";
 	PreparedStatement stmt=null;
 	ResultSet rs=null;
 	@SuppressWarnings("rawtypes")
@@ -48,7 +48,7 @@ public class Result extends HttpServlet implements EnvironmentVariable {
 		try {
 			Class.forName(driver);
 			Connection con =DriverManager.getConnection(url,usr,pwd);
-			stmt=con.prepareStatement("select * from TEST_TO_DO");
+			stmt=con.prepareStatement("select * from TEST_TO_DO order by SR_NO ASC");
 	
 			rs  = stmt.executeQuery();
 			while(rs.next()) {
@@ -94,7 +94,7 @@ public class Result extends HttpServlet implements EnvironmentVariable {
 			Class.forName(driver);
 			Connection con =DriverManager.getConnection(url,usr,pwd);
 			if(TODO!=null) {
-			stmt=con.prepareStatement("insert into TEST_TO_DO (Sr_no,TO_DO, STATUS) values (Sr_no_sequence.nextval,?, ?)");
+			stmt=con.prepareStatement("insert into TEST_TO_DO (Sr_no,TO_DO, STATUS) values (SR_NO_sequence.nextval,?, ?)");
 			//stmt.setString(1,"Sr_no_sequence.nextval");
 		//	stmt.setInt(1, 1);
 			stmt.setString(1, TODO);
