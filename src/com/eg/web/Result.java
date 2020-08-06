@@ -25,11 +25,11 @@ public class Result extends HttpServlet implements EnvironmentVariable {
 	//String host=System.getenv("DATABASE_HOST");
 	//String port=System.getenv("DATABASE_PORT");
 	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@"+"103.117.155.56:"+port+"/orcl1";
+	String url="jdbc:oracle:thin:@"+host+port+"/orcl1";
 	
 	
-	String usr="system";
-	String pwd="root";
+	String usr=usr;
+	String pwd=password;
 	PreparedStatement stmt=null;
 	ResultSet rs=null;
 	@SuppressWarnings("rawtypes")

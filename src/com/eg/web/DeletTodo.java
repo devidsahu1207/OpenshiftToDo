@@ -21,8 +21,8 @@ public class DeletTodo extends HttpServlet implements EnvironmentVariable {
 
 	String driver="oracle.jdbc.driver.OracleDriver";
 	String url="jdbc:oracle:thin:@"+host+":"+port+"/orcl1";
-	String usr="system";
-	String pwd="root";
+	String usr=user;
+	String pwd=password;
 	PreparedStatement stmt=null;
 	ResultSet rs=null;
 
