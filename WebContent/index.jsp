@@ -19,7 +19,7 @@
 $(document).ready(function () {
 $('#success').click(function (e) {
   e.preventDefault()
-  $('#message').html('<div class="alert alert-success fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">×</button>This is a success message</div>');
+  $('#message').html('<div class="alert alert-success fade in"><button type="button" class="close close-alert" data-dismiss="alert" aria-hidden="true">ï¿½</button>This is a success message</div>');
 }
 </script>
 <meta charset="ISO-8859-1">
@@ -120,8 +120,8 @@ $('#success').click(function (e) {
 </table>
 </div>
   
-<div class="footer">Copyright 2017:
- <a href="http://Prodevans.com"> Prodevans Technologies LLP</a>
+<div class="footer">Create By Abhinish Raj:
+ <a href="https://github.com/Abhinish13"> Abhinish Raj</a>
 </div>
 
 
